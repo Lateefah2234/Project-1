@@ -89,13 +89,15 @@ public class CourseApp {
     int creditHours = Integer.parseInt(line);
     System.out.println("Enter the name of the instructor: ");
     String instructor =  sc.nextLine();
+    Course course = new Course(title, creditHours, instructor);
     System.out.println("Enter the number of teaching assistants: ");
     int number = sc.nextInt();
     for(int i = 0; i < number; i++){
       System.out.println("Enter the name of one teaching assistant: ");
-      assistant[i] = sc.nextLine();}
-      course.setnumber(number);
-    Course course = new Course(title, creditHours, instructor);
+      course.setNumberOfTAs(number);
+      String assistant = sc.nextLine();
+      course.addTeachingAssistant(assistant);
+   
     return course;}
 
 
