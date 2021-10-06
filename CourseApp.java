@@ -122,8 +122,11 @@ public class CourseApp {
   }
 
   private static void displayInstructionalStaff(Course course){
-    course.displayStaff();
-  }
+    if (course != null) {
+      course.displayStaff();
+    } else {
+     System.out.println("Please create a course first.");
+  }}
 
 
   private static void displayEnrolled(Course course){

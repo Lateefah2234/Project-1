@@ -41,8 +41,7 @@ public class Course {
   }
   public void displayStaff(){
       System.out.println("Course instructor = " + instructor + "Teaching assistants = ");
-      int l = number;
-      for(int k = 0; k < l; k++){
+      for(int k = 0; k < 3; k++){
         System.out.println(assistant[k]);
       }
 }}
