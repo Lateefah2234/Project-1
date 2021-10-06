@@ -6,6 +6,7 @@ public class Course {
   private int enrollment;
   private String instructor;
   private String[] assistant = new String[3];
+  private int number;
 
   public  Course(String title, int creditHours, String instructor) {
       this.title = title;
@@ -33,15 +34,15 @@ public class Course {
     } else {
       return false;
     }
+
+}
+  public void addTeachingAssistant(String assistant, int index){
+    this.assistant[index] = assistant;
   }
   public void displayStaff(){
-    System.out.println("Course instructor = " + instructor + "Teaching assistants = ");
-    int l = setnumber();
-    for(int k = 0; k < l); k++){
-      System.out.println(assistant[k]);
-    }
-  }
-  public int setnumber(int number){
-    this.number = number;
-    return number;
+      System.out.println("Course instructor = " + instructor + "Teaching assistants = ");
+      int l = number;
+      for(int k = 0; k < l; k++){
+        System.out.println(assistant[k]);
+      }
 }}
