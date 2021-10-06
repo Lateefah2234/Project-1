@@ -87,14 +87,15 @@ public class CourseApp {
     System.out.print("Enter credit hours: ");
     String line = sc.nextLine();
     int creditHours = Integer.parseInt(line);
-    System.out.println("Enter the name of the instructor: ");
+    System.out.print("Enter the name of the instructor: ");
     String instructor =  sc.nextLine();
     System.out.println("Enter the number of teaching assistants: ");
-    int number = sc.nextInt();
+    int number = Integer.parseInt(sc.nextLine());
     for(int i = 0; i < number; i++){
       System.out.println("Enter the name of one teaching assistant: ");
-      assistant[i] = sc.nextLine();}
-      course.setnumber(number);
+      String assistant = sc.nextLine();
+      course.addTeachingAssistant(assistant, i);
+    }
     Course course = new Course(title, creditHours, instructor);
     return course;}
 
@@ -123,6 +124,7 @@ public class CourseApp {
   private static void displayInstructionalStaff(Course course){
     course.displayStaff();
   }
+
 
   private static void displayEnrolled(Course course){
     course.showenrolled();
