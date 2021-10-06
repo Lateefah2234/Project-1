@@ -91,12 +91,12 @@ public class CourseApp {
     String instructor =  sc.nextLine();
     System.out.println("Enter the number of teaching assistants: ");
     int number = Integer.parseInt(sc.nextLine());
+    Course course = new Course(title, creditHours, instructor);
     for(int i = 0; i < number; i++){
       System.out.println("Enter the name of one teaching assistant: ");
       String assistant = sc.nextLine();
       course.addTeachingAssistant(assistant, i);
     }
-    Course course = new Course(title, creditHours, instructor);
     return course;}
 
 
